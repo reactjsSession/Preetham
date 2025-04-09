@@ -6,7 +6,11 @@ function Parent() {
     setCount(count + 1);
   }
   const removefromcount = () => {
-    setCount(count - 1);
+    if(count>0){
+      setCount(count - 1);
+    }else if(0>count){
+      alert("Count cannot be negative")
+    }
   }
   return (
     <center>
